@@ -1,0 +1,59 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid #0f0;
+    margin-top: 20px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item .circle {
+    position: absolute;
+    left: -9px;
+    top: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #0f0;
+    border: 2px solid #0f0;
+    border-radius: 50%;
+}
+
+.timeline-item h5 {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.timeline-item span {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.timeline-item ul {
+    padding-left: 20px;
+    list-style: none;
+}
+
+.timeline-item ul li {
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.timeline-item ul li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #0f0;
+    font-size: 1.2rem;
+    line-height: 1;
+}
