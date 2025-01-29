@@ -71,7 +71,7 @@
 
     .description.active {
       opacity: 1;
-      max-height: 100px;
+      max-height: 1000px;
     }
 
     .description-text {
@@ -177,32 +177,29 @@ footer {
     <p class="text-muted">Programming Languages & Tools</p>
     <div class="row justify-content-center skills-section">
       <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-html5-plain colored icon" title="HTML5" data-description="While building this website and some others for many projects you can find on github."></i>
+        <i class="fab devicon-html5-plain colored icon" title="HTML5" data-description="Used while building this website. I discovered it while building many projects you can find on github (e.g. Nova Project)."></i>
       </div>
       <div class="col-3 col-sm-2 my-3">
         <i class="fab devicon-javascript-plain colored icon" title="JavaScript" data-description="First aproach while building websites and discord bots and deeply used while doing some pool organized at Epita."></i>
       </div>
       <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-c-plain colored icon" title="C" data-description="C: A general-purpose computer programming language."></i>
+        <i class="fab devicon-c-plain colored icon" title="C" data-description="The very first language I learnt. I ended up coding many projects with this language : Malloc, OCR and 42sh. I deepened my knowledge of C during a 2-week pool."></i>
       </div>
       <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-cplusplus-plain colored icon" title="C++" data-description="C++: An enhanced general-purpose computer programming language."></i>
+        <i class="fab devicon-cplusplus-plain colored icon" title="C++" data-description="Coming from C language, learning C++ and using all of its librairies (that we have to code from scratch in C) was a true pleasure. I used C++ while developing games on Unreal Engine, creating a Gossip-lite network and during pools at Epita."></i>
       </div>
       <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-csharp-plain colored icon" title="C#" data-description="C#: A modern, object-oriented programming language developed by Microsoft."></i>
+        <i class="fab devicon-csharp-plain colored icon" title="C#" data-description="The first object-oriented programming language i learnt while developing games on Unity. I used it to develop Nova Project and the tiny maze game."></i>
       </div>
       <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-python-plain colored icon" title="Python" data-description="Python: A high-level, interpreted programming language."></i>
+        <i class="fab devicon-python-plain colored icon" title="Python" data-description="Every time I needed to perform high-level analysis I used python. The first time to analyze earth's magnetic field with Astro Pi project. The next time to create a movie recommendation system given a user's watch list"></i>
       </div>
       <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-postgresql-plain colored icon" title="Postgres" data-description="Postgres: A client-server program that interact with databases."></i>
-      </div>
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-mysql-plain colored icon" title="MySQL" data-description="MySQL: Another client-server program that interact with databases."></i>
+        <i class="fab devicon-postgresql-plain colored icon" title="Postgres" data-description="I recently learned how to use this client-server interacting with databases during a pool that lasted a whole week."></i>
       </div>
       
     </div>
-
+    <h1 id="dynamic-title" class="fw-bold mt-4"></h1>
     <div class="description">
       <p id="description-text" class="description-text"></p>
     </div>
@@ -227,10 +224,11 @@ footer {
         // Fade out current text
         descriptionText.classList.remove('active');
         description.classList.add('active');
-        
+        const dynamicTitle = document.getElementById('dynamic-title');
         // Wait a brief moment, then update text and fade in
         setTimeout(() => {
           descriptionText.textContent = icon.getAttribute('data-description');
+          dynamicTitle.textContent = icon.title;
           descriptionText.classList.add('active');
         }, 250);
       });
@@ -254,7 +252,7 @@ footer {
       <p>Ivan HUARD - Created with ❤ and JavaScript</p>
       <div class="social-links">
         <a href="https://github.com/Input-Fr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.linkedin.com/in/ivan-huard-16285119a/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="ivan.huard@epita.fr" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </footer>
