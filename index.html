@@ -182,6 +182,55 @@
   background: #4fe6e6;
   box-shadow: 0 0 10px rgba(79, 230, 230, 0.4);
 }
+.terminal {
+      background: #1a1a1a;
+      border-radius: 8px;
+      padding: 20px;
+      font-family: 'Courier New', monospace;
+      max-width: 600px;
+      margin: 40px auto;
+      border: 1px solid rgba(79, 230, 230, 0.2);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .terminal-prompt {
+      color: #4fe6e6;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    .prompt-text {
+      color: #4fe6e6;
+      margin-right: 8px;
+    }
+
+    .terminal-output {
+      color: #a0a0a0;
+      margin-left: 20px;
+      opacity: 0;
+      animation: fadeIn 0.5s ease-in forwards;
+      animation-delay: 1s;
+    }
+
+    .typing {
+      animation: typing 2s steps(40, end);
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      width: 0;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 150px }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -207,16 +256,23 @@
       </nav>
   <header>
     <h1 class="fw-bold text-center">IVAN HUARD</h1>
-    <p>Computer Science Student | Software Developer Enthusiast | AI Explorer | Innovator</p>
+    <p>Computer Science Student | Software Developer Enthusiast | AI Explorer</p>
   </header>
-
-  
+  <div class="terminal">
+    <div class="terminal-prompt">
+      <span class="prompt-text">42$</span>
+      <span class="typing">find projects</span>
+    </div>
+    <div class="terminal-output">
+      > Every project I talk about in this portfolio is available on GitHub
+    </div>
+  </div>
 
   <footer>
     <p>Ivan HUARD - Created with ❤ and JavaScript</p>
     <div class="social-links">
       <a href="https://github.com/Input-Fr" target="_blank"  title="GitHub"><i class="fab fa-github"></i></a>
-      <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.linkedin.com/in/ivan-huard-16285119a/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
       <a href="ivan.huard@epita.fr" title="Email"><i class="fas fa-envelope"></i></a>
     </div>
   </footer>
