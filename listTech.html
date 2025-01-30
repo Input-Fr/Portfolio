@@ -7,6 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <style>
     body {
       background-color: #0a0a0a;
@@ -14,7 +15,7 @@
     }
 
     .container {
-      padding: 2rem 1rem;
+      padding: 1rem 1rem;
     }
 
     h1 {
@@ -23,7 +24,6 @@
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       letter-spacing: 2px;
     }
-
     .text-muted {
       color: #a0a0a0 !important;
     }
@@ -49,7 +49,7 @@
     }
 
     .skills-section {
-      margin-top: 2rem;
+      margin-top: 1rem;
       background: #1a1a1a;
       border-radius: 20px;
       padding: 2rem;
@@ -58,7 +58,7 @@
     }
 
     .description {
-      margin-top: 2rem;
+      margin-top: 1rem;
       background: rgba(26, 26, 26, 0.5);
       border-radius: 10px;
       padding: 1rem;
@@ -192,18 +192,51 @@ footer {
         <i class="fab devicon-csharp-plain colored icon" title="C#" data-description="The first object-oriented programming language i learnt while developing games on Unity. I used it to develop Nova Project and the tiny maze game."></i>
       </div>
       <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-python-plain colored icon" title="Python" data-description="Every time I needed to perform high-level analysis I used python. The first time to analyze earth's magnetic field with Astro Pi project. The next time to create a movie recommendation system given a user's watch list"></i>
+        <i class="fab devicon-python-plain colored icon" title="Python" data-description="Every time I needed to perform high-level analysis, I used python. The first time to analyze earth's magnetic field with Astro Pi project. The next time to create a movie recommendation system given a user's watch list"></i>
       </div>
       <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-postgresql-plain colored icon" title="Postgres" data-description="I recently learned how to use this client-server interacting with databases during a pool that lasted a whole week."></i>
+        <i class="fab devicon-postgresql-plain colored icon" title="Postgres" data-description="I learned PostgreSQL during a pool that lasted one whole week, gaining hands-on experience with database system. During this time, I learned how to structure databases using schemas, normalize tables for efficiency, and perform essential SQL operations like data manipulation, table joins, transactions, and views. Additionally, I explored query optimization techniques, including indexing, to enhance performance."></i>
       </div>
       
     </div>
     <h1 id="dynamic-title" class="fw-bold mt-4"></h1>
-    <div class="description">
+    <div class="description mb-2">
       <p id="description-text" class="description-text"></p>
     </div>
   </div>
+
+  <!-- MY TOOLS -->
+  <div class="container text-center mt-1">
+    <h1 class="fw-bold">MY TOOLS</h1>
+    <p class="text-muted">Development Tools & Platforms</p>
+    <br><br>
+    <div class="row justify-content-center tools-section">
+      
+      <div class="col-3 col-sm-2 my-3">
+        <i class="fab fa-github icon" title="GitHub" data-description="My primary platform for hosting and collaborating on projects. You can check out my work on GitHub!"></i>
+      </div>
+
+      <div class="col-3 col-sm-2 my-3">
+        <i class="devicon-unity-original icon" title="Unity" data-description="Game engine I use for game development, including projects like Nova Project."></i>
+      </div>
+
+      <div class="col-3 col-sm-2 my-3">
+        <i class="devicon-jetbrains-plain icon" title="JetBrains" data-description="JetBrains IDEs is a powerful suite I use through Pycharm, CLion and Rider."></i>
+      </div>
+
+      <div class="col-3 col-sm-2 my-3">
+        <i class="devicon-vim-plain icon" title="Vim" data-description="Vim is my C text editor for fast and efficient coding."></i>
+      </div>
+
+      <div class="col-3 col-sm-2 my-3">
+        <i class="devicon-jupyter-plain-wordmark icon" title="Jupyter" data-description="I used Jupyter while learning signal processing involving the fourier transform and many other mathematics theorems. I also used it while learning pattern recognition and machine learning in India."></i>
+      </div>
+
+      <div class="col-3 col-sm-2 my-3">
+        <i class="devicon-linux-plain icon" title="Linux" data-description="Linux is my primary development OS, optimizing my workflow with i3 windows management."></i>
+      </div>
+    </div>
+</div>
 
   <script>
     const icons = document.querySelectorAll('.icon');
@@ -253,7 +286,7 @@ footer {
       <div class="social-links">
         <a href="https://github.com/Input-Fr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/ivan-huard-16285119a/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="ivan.huard@epita.fr" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="mailto:ivan.huard@epita.fr" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
     </footer>
 </body>
