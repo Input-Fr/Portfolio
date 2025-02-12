@@ -3,96 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Skills Section</title>
+  <title>Tech Projects</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <style>
     body {
       background-color: #0a0a0a;
+    }
+    .card {
+      text-decoration: none;
+      color: inherit;
+      margin: 0 auto;
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+      background: #1a1a1a;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: scale(1.03) translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4),
+                  0 0 20px rgba(79, 230, 230, 0.1);
+      border-color: rgba(79, 230, 230, 0.3);
+    }
+    .card-header {
+      padding: 0;
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      border: none;
+      background: #000;
+    }
+    .header-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.7;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .card:hover .header-img {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+    .header-text {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7));
+      color: #4fe6e6;
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .tech-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+    .card-body {
+      padding: 1.5rem;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
       color: #4fe6e6;
     }
-
-    .container {
-      padding: 1rem 1rem;
+    .card-text {
+      color: #a0a0a0;
+      font-size: 0.95rem;
+      line-height: 1.5;
     }
-
     h1 {
       font-size: 2.5rem;
       color: #4fe6e6;
       text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
       letter-spacing: 2px;
     }
-    .text-muted {
-      color: #a0a0a0 !important;
-    }
-
-    .icon {
-      font-size: 3rem;
-      color: #a0a0a0;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .icon:hover {
-      transform: scale(1.2);
-      color: #4fe6e6;
-      text-shadow: 0 0 20px rgba(79, 230, 230, 0.4);
-    }
-
-    .icon.active {
-      color: #4fe6e6;
-      transform: scale(1.2);
-      text-shadow: 0 0 20px rgba(79, 230, 230, 0.4);
-    }
-
-    .skills-section {
-      margin-top: 1rem;
-      background: #1a1a1a;
-      border-radius: 20px;
-      padding: 2rem;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    }
-
-    .description {
-      margin-top: 1rem;
-      background: rgba(26, 26, 26, 0.5);
-      border-radius: 10px;
-      padding: 1rem;
-      border: 1px solid rgba(79, 230, 230, 0.1);
-      transition: opacity 0.3s ease;
-      opacity: 0;
-      max-height: 0;
-      overflow: hidden;
-    }
-
-    .description.active {
-      opacity: 1;
-      max-height: 1000px;
-    }
-
-    .description-text {
-      color: #a0a0a0;
+    hr {
+      border-color: rgba(79, 230, 230, 0.1);
       margin: 0;
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
     }
-
-    .description-text.active {
-      opacity: 1;
-      transform: translateY(0);
+    .container {
+      padding: 2rem 1rem;
     }
-
-    .col-3 {
-      transition: transform 0.3s ease;
-    }
-
-    .col-3:hover {
-      transform: translateY(-5px);
+    .code-tag {
+      color: #4fe6e6;
+      font-family: monospace;
+      font-size: 0.9rem;
+      background: rgba(79, 230, 230, 0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-top: 0.5rem;
+      display: inline-block;
     }
     .nav-link:hover {
   color: #a0a0a0 !important;
@@ -172,104 +185,173 @@ footer {
       </div>
     </div>
   </nav>
-  <div class="container text-center my-5">
-    <h1 class="fw-bold">SKILLS</h1>
-    <p class="text-muted">Programming Languages & Tools</p>
-    <div class="row justify-content-center skills-section">
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-html5-plain colored icon" title="HTML5" data-description="Used while building this website. I discovered it while building many projects you can find on github (e.g. Nova Project)."></i>
+  <div class="container">
+    <div class="row g-4">
+      <h1 class="fw-bold text-center">PORTFOLIO</h1>
+      <p class="card-text text-center">Every project I have created/led so far</p>
+      <!-- GAMES -->
+      <div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/NovaProject.git" class="card h-100">
+          <div class="card-header">
+            <img src="https://github.com/Input-Fr/NovaProject/blob/main/docs/img/NovaProject1.png?raw=true" alt="Algorithms" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">🎮</div>
+              GAME
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">Nova Project</h5>
+            <p class="card-text">The first "big" video game I made where the player is immersed in a futuristic world.</p>
+            <span class="code-tag">FPS - C#</span>
+          </div>
+        </a>
       </div>
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-javascript-plain colored icon" title="JavaScript" data-description="First aproach while building websites and discord bots."></i>
+
+      <div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/FunMazeGame.git" class="card h-100">
+          <div class="card-header">
+            <img src="https://github.com/Input-Fr/FunMazeGame/raw/main/images/fpview.png" alt="Algorithms" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">🎮</div>
+              GAME
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">Tiny Maze</h5>
+            <p class="card-text">A random maze generator (adapted from a python 2D maze code generator) in 3D built with Unity.</p>
+            <span class="code-tag">FPV - C#</span>
+          </div>
+        </a>
       </div>
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-java-plain colored icon" title="Java" data-description="First aproach while doing a pool at Epita and deeply used while building a microservice architecture following a MVC model where each microservice communicate through Kafka."></i>
+
+      <div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/SchoolLife.git" class="card h-100">
+          <div class="card-header">
+            <img src="https://raw.githubusercontent.com/Input-Fr/SchoolLife/refs/heads/main/logoSchoolLife.png" alt="Algorithms" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">🎮</div>
+              GAME
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">School Life</h5>
+            <p class="card-text">A multiplayer roleplay game where anyone can create a game and invite its friend to play with.</p>
+            <span class="code-tag">TPV - C#</span>
+          </div>
+        </a>
       </div>
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-c-plain colored icon" title="C" data-description="The very first language I learnt. I ended up coding many projects with this language : Malloc, OCR and 42sh. I deepened my knowledge of C during a 2-week pool."></i>
+      <!-- NETWORK -->
+      <div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/OmnetAss2" class="card h-100">
+          <div class="card-header">
+            <img src="https://github.com/Input-Fr/OmnetAss2/blob/main/image.png?raw=true" alt="Algorithms" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">🌐</div>
+              NETWORK
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">Network Simulation protocol</h5>
+            <p class="card-text">Hand-made creation of a Network built on Omnet++.</p>
+            <span class="code-tag">Omnet++ - C++</span>
+          </div>
+        </a>
+      </div>      
+      <!-- DATA ANALYSIS -->
+      <div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/AstroPi.git" class="card h-100">
+          <div class="card-header">
+            <img src="https://images.ctfassets.net/yft5xyng9e7d/5Y2np9NcSuc4ELMSpCOSxO/ad27b1a0b3ba8c7efacad8ad01956fb6/astro_pi_opengraph-c2e17dc9e256ecd0b13ae02bcb6cb666a0b4342a49a68d5e6df184fbbd9a0e8f3ff4aa32a97d9a7696bb90af66bb96fcd16969988.png?w=1200" alt="Algorithms" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">📊</div>
+              DATA SCIENCE
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">Astro Pi - Earth's Magnetic Field study</h5>
+            <p class="card-text">Through this project I learned both to use a Raspberry's sensors and to analyze some data gathered from it on ISS.</p>
+            <span class="code-tag">Raspberry Pi - Python</span>
+          </div>
+        </a>
       </div>
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-cplusplus-plain colored icon" title="C++" data-description="Coming from C language, learning C++ and using all of its librairies (that we have to code from scratch in C) was a true pleasure. I used C++ while developing games on Unreal Engine, creating a network and during pools at Epita."></i>
+      <div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/PRML-Movie-Recommendation.git" class="card h-100">
+          <div class="card-header">
+            <img src="https://www.reliancedigital.in/wp-content/uploads/2019/02/netflix_movies_cover.jpg" alt="Algorithms" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">📊</div>
+              DATA SCIENCE
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">PRML - Movie Recommendation System</h5>
+            <p class="card-text">We tried multiples approach in data analysis to get the best movie recommendation given a user preferences.</p>
+            <span class="code-tag">Pycharm - Python</span>
+          </div>
+        </a>
       </div>
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-csharp-plain colored icon" title="C#" data-description="The first object-oriented programming language i learnt while developing games on Unity. I used it to develop Nova Project and the tiny maze game."></i>
+      <!-- NEURAL NETWORK -->
+      <div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/OCR.git" class="card h-100">
+          <div class="card-header">
+            <img src="https://i.redd.it/3sd4sdlsze4d1.jpeg" alt="Machine Learning" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">🤖</div>
+              NEURAL NETWORKS
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">Sudoku - Digit recognition</h5>
+            <p class="card-text">Both technical and theoretical experience as I had to create a Neural Network, able to recognize digit given a picture (in C language from scratch).</p>
+            <span class="code-tag">C</span>
+          </div>
+        </a>
       </div>
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-python-plain colored icon" title="Python" data-description="Every time I needed to perform high-level analysis, I used python. The first time to analyze earth's magnetic field with Astro Pi project. The second time to create a movie recommendation system given a user's watch list"></i>
-      </div>
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab devicon-postgresql-plain colored icon" title="Postgres" data-description="I learned PostgreSQL during a pool that lasted one whole week, gaining hands-on experience with database system. During this time, I learned how to structure databases using schemas, normalize tables for efficiency, and perform essential SQL operations like data manipulation, table joins, transactions, and views. Additionally, I explored query optimization techniques, including indexing, to enhance performance."></i>
+      <!-- Systems Programming -->
+      <div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/Malloc.git" class="card h-100">
+          <div class="card-header">
+            <img src="https://github.com/Input-Fr/Malloc/blob/master/malloc/image.png?raw=true" alt="Algorithms" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">⚙️</div>
+              SYSTEMS PROGRAMMING 
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">My Malloc</h5>
+            <p class="card-text">Dynamic memory allocator built from scratch in C. Its system follow a linked-list structure through an allocated page.</p>
+            <span class="code-tag">Linux - C</span>
+          </div>
+        </a>
+      </div><div class="col-12 col-md-4">
+        <a target="_blank" href="https://github.com/Input-Fr/42sh.git" class="card h-100">
+          <div class="card-header">
+            <img src="https://github.com/Input-Fr/42sh/blob/main/Terminalicon1.png?raw=true" alt="Algorithms" class="header-img">
+            <div class="header-text">
+              <div class="tech-icon">⚙️</div>
+              SYSTEMS PROGRAMMING 
+            </div>
+          </div>
+          <hr>
+          <div class="card-body">
+            <h5 class="card-title">My Shell - 42sh</h5>
+            <p class="card-text">Interactive posix shell built from scratch (including lexing and parsing) in C with some built-in like cd, redirections, pipelines, subshells and much more.</p>
+            <span class="code-tag">Linux - C</span>
+          </div>
+        </a>
       </div>
       
-    </div>
-    <h1 id="dynamic-title" class="fw-bold mt-4"></h1>
-    <div class="description mb-2">
-      <p id="description-text" class="description-text"></p>
     </div>
   </div>
-
-  <!-- MY TOOLS -->
-  <div class="container text-center mt-1">
-    <h1 class="fw-bold">MY TOOLS</h1>
-    <p class="text-muted">Development Tools & Platforms</p>
-    <br><br>
-    <div class="row justify-content-center tools-section">
-      
-      <div class="col-3 col-sm-2 my-3">
-        <i class="fab fa-github icon" title="GitHub" data-description="My primary platform for hosting and collaborating on projects. You can check out my work on GitHub!"></i>
-      </div>
-
-      <div class="col-3 col-sm-2 my-3">
-        <i class="devicon-unity-original icon" title="Unity" data-description="Game engine I use for game development, including projects like Nova Project."></i>
-      </div>
-
-      <div class="col-3 col-sm-2 my-3">
-        <i class="devicon-jetbrains-plain icon" title="JetBrains" data-description="JetBrains IDEs is a powerful suite I use through Pycharm, CLion and Rider."></i>
-      </div>
-
-      <div class="col-3 col-sm-2 my-3">
-        <i class="devicon-vim-plain icon" title="Vim" data-description="Vim is my C text editor for fast and efficient coding."></i>
-      </div>
-
-      <div class="col-3 col-sm-2 my-3">
-        <i class="devicon-jupyter-plain-wordmark icon" title="Jupyter" data-description="I used Jupyter while learning signal processing involving the fourier transform and many other mathematics theorems. I also used it while learning pattern recognition and machine learning in India."></i>
-      </div>
-
-      <div class="col-3 col-sm-2 my-3">
-        <i class="devicon-linux-plain icon" title="Linux" data-description="Linux is my primary development OS, optimizing my workflow with i3 windows management."></i>
-      </div>
-    </div>
-</div>
-
-  <script>
-    const icons = document.querySelectorAll('.icon');
-    const description = document.querySelector('.description');
-    const descriptionText = document.getElementById('description-text');
-    
-    // Ensure text is empty at start
-    descriptionText.textContent = '';
-    
-    icons.forEach(icon => {
-      icon.addEventListener('click', () => {
-        // Remove active class from all icons
-        icons.forEach(i => i.classList.remove('active'));
-        
-        // Add active class to clicked icon
-        icon.classList.add('active');
-
-        // Fade out current text
-        descriptionText.classList.remove('active');
-        description.classList.add('active');
-        const dynamicTitle = document.getElementById('dynamic-title');
-        // Wait a brief moment, then update text and fade in
-        setTimeout(() => {
-          descriptionText.textContent = icon.getAttribute('data-description');
-          dynamicTitle.textContent = icon.title;
-          descriptionText.classList.add('active');
-        }, 250);
-      });
-    });
-  </script>
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -287,7 +369,7 @@ footer {
     <footer>
       <p>Ivan HUARD - Created with ❤ and JavaScript</p>
       <div class="social-links">
-        <a href="https://github.com/Input-Fr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/Input-Fr" title="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/ivan-huard-16285119a/" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
         <a href="mailto:ivan.huard@epita.fr" title="Email"><i class="fas fa-envelope"></i></a>
       </div>
